@@ -63,14 +63,14 @@ function UpdateCheck($url,$flag = 'Sakurairo'){
     );
 }
 switch(iro_opt('iro_update_source')){
-    case 'github':
-        $iroThemeUpdateChecker = UpdateCheck('https://github.com/mirai-mamori/Sakurairo','Sakurairo');
+    case 'custom':
+        $iroThemeUpdateChecker = UpdateCheck('https://github.com/ZaeXT/Sakurairo','Sakurairo');
         break;
-    case 'upyun':
-        $iroThemeUpdateChecker = UpdateCheck('https://update.maho.cc/jsdelivr.json');
+    case 'same':
+        $iroThemeUpdateChecker = UpdateCheck('https://github.com/ZaeXT/Sakurairo','Sakurairo');
         break;
-    case 'official_building':
-        $iroThemeUpdateChecker = UpdateCheck('https://update.maho.cc/'.iro_opt('iro_update_channel').'/check.json');
+    case 'too':
+        $iroThemeUpdateChecker = UpdateCheck('https://github.com/ZaeXT/Sakurairo','Sakurairo');
 }
 //ini_set('display_errors', true);
 //error_reporting(E_ALL);
